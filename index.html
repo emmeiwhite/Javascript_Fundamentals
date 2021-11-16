@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>World of Javascript</title>
 </head>
 <body>
     <h1>Life is not Gloomy, It's how we react to it.</h1>
     <h4>In cold you need to keep yourself warm.</h4>
 
-    <!-- Inline Javascript -->
+    <!-- Inline Javascript : Not recommended because it is redundant and time consuming -->
     <button onclick="console.log('Button Clicked')">Click me</button>
+
+    
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+    <button class="btn">Random Button</button>
+
+    <!-- Internal Javascript: Better than Inline Javascript but if we have many HTML pages,
+         then this again is not a good approach  -->
+    <script>
+        document.querySelectorAll('.btn').forEach(item=>{
+            item.addEventListener('click', (e)=> {
+                console.log("Button clicked"); // Here we can see that the code is not redundant
+                console.dir(e.target);
+            });
+        })
+    </script>
 </body>
 </html>
