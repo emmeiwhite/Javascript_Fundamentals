@@ -1,4 +1,4 @@
-// 1. map()
+// 1. map() : Returns an Array
 
 const people = [
   { name: "Emmei", age: 29, designation: "Developer" },
@@ -17,4 +17,14 @@ const names = people.map((person) => {
 });
 
 console.log(names.join(""));
-document.body.innerHTML = names.join("");
+document.body.innerHTML = names.join(""); // join() method makes one string out of array
+
+// 2. filter() : Returns an Array
+
+const filteredPersons = people.filter((person) => person.age <= 29);
+console.log(filteredPersons);
+
+// 3. find() : returns one item only | And first instance in case two conditions are satisfied
+
+const filteredPerson = people.find((person) => person.age <= 29);
+console.log(filteredPerson);
