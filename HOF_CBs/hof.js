@@ -60,3 +60,21 @@ function addArrays(arr, cb) {
 
 const updatedArray = addArrays(numbers, sum);
 console.log(updatedArray);
+
+// Example 2
+
+function run(name) {
+  return `${name} is running`;
+}
+
+// HOF
+
+function runTowardsDestiny(name, destination, cb) {
+  return `${cb(name)} towards ${destination}`;
+}
+
+const destinationImran = runTowardsDestiny("Imran", "Jannah", run); // Note that we are passing the reference of callback only
+const destinationSatan = runTowardsDestiny("Satan", "Hell", run);
+
+console.log(destinationImran);
+console.log(destinationSatan);
