@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .haveFun {
+            color:orangered;
+            font-size: 2rem;
+            background-color: palegreen;
+            padding: 1rem;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+        .menus {
+            padding: 0.5rem 1rem;
+            color:#fff;
+            background-color: purple;
+            cursor: pointer;
+            margin-right: 0.25rem;
+            border-radius: 0.125rem;
+        }
+
+        .main {
+            background: pink;
+            color: green;
+            padding:2rem;
+        }
+
+        .footerLinks {
+            background: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem 1rem;
+        }
+
+        .footerLinks li {
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Accessing DOM Element or Multiple Nodes -->
+
+    <h1>DOM Manipulations</h1>
+
+    <ul>
+        <li class="list">Item 1 </li>
+        <li class="list">Item 2</li>
+        <li class="list">Item 3</li>
+        <li class="list">Item 4</li>
+        <li class="list">Item 5</li>
+    </ul>
+
+    <section>I am nextElementSibling of ul</section>
+
+    <!-- remove the element from Javascript -->
+    <main class="main">
+        I am the main element
+    </main>
+    
+    <!-- textContent vs innerHTML -->
+    <footer>
+
+    </footer>
+
+    <script src="./dom.js"></script>
+</body>
+</html>
