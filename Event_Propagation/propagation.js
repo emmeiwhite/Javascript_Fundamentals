@@ -12,7 +12,17 @@ button.addEventListener("click", (e) => {
   container.appendChild(heading);
 });
 
-let heading = document.querySelector(".heading");
-heading.addEventListener("click", (e) => {
-  console.log("heading CLICKED");
+// Since the heading element and class were created on the fly, this event is not working.
+// SOLUTION is Event Propagation where we set the event handler on the parent and target the element
+// let heading = document.querySelector(".heading");
+// heading.addEventListener("click", (e) => {
+//   console.log("heading CLICKED");
+// });
+
+// Here we go then | Wonderful
+
+container.addEventListener("click", (e) => {
+  if (e.target.className === "heading") {
+    console.log("Heading Clicked");
+  }
 });
