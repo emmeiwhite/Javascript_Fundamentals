@@ -1,0 +1,22 @@
+.container {
+  padding: 3rem;
+  background: whitesmoke;
+  cursor: pointer;
+}
+.item {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+  color: rgb(220, 226, 226);
+  padding: 0.5rem 1rem;
+  background-color: seagreen;
+  display: block;
+  margin: 1rem;
+  text-transform: uppercase;
+  background-color: rgb(255, 94, 0);
+}
+
+.currentDetails {
+  color: #232323;
+}
