@@ -10,6 +10,7 @@ const current = document.querySelector(".currentDetails");
 // Now, main concept here is that we will set event handlers on these two elements which in the DOM tree above links
 // Even when we click on the links we will see that events are automatically registered on the parent elements upto the root in the DOM tree
 
+/*
 container.addEventListener("click", (e) => {
   console.log("target", e.target);
   console.log("current target", e.currentTarget);
@@ -20,3 +21,17 @@ listItems.addEventListener("click", (e) => {
   console.log("target", e.target);
   console.log("current target", e.currentTarget);
 });
+*/
+
+// Event Bubbling and Capturing
+
+const eventDelegation = (e) => {
+  console.log("target", e.target);
+  console.log("current target", e.currentTarget);
+};
+
+// Bubbling is by default, from target to the root
+listItems.addEventListener("click", eventDelegation);
+container.addEventListener("click", eventDelegation);
+document.addEventListener("click", eventDelegation);
+window.addEventListener("click", eventDelegation);
