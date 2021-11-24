@@ -31,7 +31,15 @@ const eventDelegation = (e) => {
 };
 
 // Bubbling is by default, from target to the root
+/**
 listItems.addEventListener("click", eventDelegation);
 container.addEventListener("click", eventDelegation);
 document.addEventListener("click", eventDelegation);
 window.addEventListener("click", eventDelegation);
+ */
+
+// Capturing is from Root to the target, let's do that
+listItems.addEventListener("click", eventDelegation, { capture: true });
+container.addEventListener("click", eventDelegation, { capture: true });
+document.addEventListener("click", eventDelegation, { capture: true });
+window.addEventListener("click", eventDelegation, { capture: true });
