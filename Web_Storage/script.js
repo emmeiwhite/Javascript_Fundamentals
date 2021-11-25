@@ -26,3 +26,7 @@ console.log(localStorage.getItem("qualification"));
 // We can remove one item or all the items
 
 localStorage.removeItem("profession");
+
+// Clear all the localStorage items
+
+localStorage.clear();
