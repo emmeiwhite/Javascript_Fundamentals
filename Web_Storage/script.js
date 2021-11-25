@@ -22,3 +22,7 @@ localStorage.setItem("qualification", "B.Tech");
 console.log(localStorage.getItem("profession"));
 console.log(localStorage.getItem("age"));
 console.log(localStorage.getItem("qualification"));
+
+// We can remove one item or all the items
+
+localStorage.removeItem("profession");
