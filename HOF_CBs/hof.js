@@ -78,3 +78,6 @@ const destinationSatan = runTowardsDestiny("Satan", "Hell", run);
 
 console.log(destinationImran);
 console.log(destinationSatan);
+
+
+
